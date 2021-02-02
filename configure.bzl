@@ -24,6 +24,8 @@ def _impl(repository_ctx):
 
     gcc_version = repository_ctx.execute(["/bin/bash", "-c", "gcc -dumpversion | cut -f1 -d."]).stdout or "0"
     bcm2708_toolchain_root = repository_ctx.os.environ.get("BCM2708_TOOLCHAIN_ROOT", "/tools/arm-bcm2708")
+    target_toolchain_root = repository_ctx.os.environ.get("TARGET_TOOLCHAIN_ROOT", "")
+
     repository_ctx.template(
         "cc_toolchain_config.bzl",
         Label("//:cc_toolchain_config.bzl.tpl"),
@@ -32,6 +34,7 @@ def _impl(repository_ctx):
             "%{c_version}%": repository_ctx.attr.c_version,
             "%{cpp_version}%": repository_ctx.attr.cpp_version,
             "%{bcm2708_toolchain_root}%": bcm2708_toolchain_root,
+            "%{target_toolchain_root}%": target_toolchain_root,
             "%{additional_system_include_directories}%": additional_include_dirs,
         },
     )
@@ -45,6 +48,7 @@ def _impl(repository_ctx):
 cc_crosstool = repository_rule(
     environ = [
         "BCM2708_TOOLCHAIN_ROOT",
+        "TARGET_TOOLCHAIN_ROOT",
     ],
     attrs = {
         # Consult https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html for
