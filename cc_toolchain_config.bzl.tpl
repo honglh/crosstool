@@ -182,7 +182,7 @@ LINKER_FLAGS = {
     "k8":      [GOLD_LINKER_FLAG],
     "armv7a":  [GOLD_LINKER_FLAG],
     "armv6":   [GOLD_LINKER_FLAG],
-    "aarch64": [GOLD_LINKER_FLAG],
+    "aarch64": [],
     "riscv64": [],
 }
 
