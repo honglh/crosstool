@@ -106,6 +106,10 @@ CXX_BUILTIN_INCLUDE_DIRECTORIES = {
         "%{target_toolchain_include_root}%/usr/aarch64-linux-gnu/include",
         "%{target_toolchain_include_root}%/usr/include/aarch64-linux-gnu",
         "%{target_toolchain_include_root}%/usr/include",
+        "%{target_toolchain_include_root}%/usr/aarch64-linux-gnu/libc/usr/include",
+        "%{target_toolchain_include_root}%/usr/lib/gcc/aarch64-linux-gnu/%d/include" % GCC_VERSION,
+
+        
     ],
     "riscv64": [
         "/usr/riscv64-linux-gnu/include/c++/%d" % GCC_VERSION,
