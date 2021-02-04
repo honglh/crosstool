@@ -58,7 +58,7 @@ cc_crosstool = repository_rule(
         # Consult https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html for
         # valid c_version and cpp_version values (-std option).
         "c_version": attr.string(default = "c99"),
-        "cpp_version": attr.string(default = "c++11"),
+        "cpp_version": attr.string(default = "c++17"),
         "additional_system_include_directories": attr.label_list(allow_files = True),
     },
     implementation = _impl,
