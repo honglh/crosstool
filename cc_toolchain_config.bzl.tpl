@@ -64,6 +64,10 @@ CPP_VERSION = "%{cpp_version}%"
 
 # gcc -dumpversion | cut -f1 -d.
 GCC_VERSION = %{gcc_version}%
+# gcc -dumpversion 
+# we need the full version as well because some toolchains uses full version in paths
+GCC_VERSION_FULL = %{gcc_version_full}%
+
 
 # gcc -E -xc++ - -v
 CXX_BUILTIN_INCLUDE_DIRECTORIES = {
