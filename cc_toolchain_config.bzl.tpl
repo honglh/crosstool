@@ -66,7 +66,7 @@ CPP_VERSION = "%{cpp_version}%"
 GCC_VERSION = %{gcc_version}%
 # gcc -dumpversion 
 # we need the full version as well because some toolchains uses full version in paths
-GCC_VERSION_FULL = %{gcc_version_full}%
+GCC_VERSION_FULL = 7.1.1
 
 
 # gcc -E -xc++ - -v
