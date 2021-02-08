@@ -1,3 +1,5 @@
+## This is a fork from [google-coral cross tool](https://github.com/google-coral/crosstool) with more configurations  for target toolchain.
+
 # Bazel cross-compilation toolchains
 
 [Bazel](https://bazel.build) build system supports integration with custom C/C++
