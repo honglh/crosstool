@@ -89,14 +89,13 @@ CXX_BUILTIN_INCLUDE_DIRECTORIES = {
         "/usr/lib/gcc-cross/arm-linux-gnueabihf/%d/include-fixed" % GCC_VERSION,
         "/usr/arm-linux-gnueabihf/include",
         "/usr/include/arm-linux-gnueabihf",
-        "/usr/include"
+        "/usr/include",
         "/usr/arm-linux-gnueabihf/include/c++/%{target_gcc_version_full}%",
         "/usr/arm-linux-gnueabihf/include/c++/%{target_gcc_version_full}%/arm-linux-gnueabihf",
         "/usr/arm-linux-gnueabihf/include/c++/%{target_gcc_version_full}%/backward",
         "/usr/lib/gcc/arm-linux-gnueabihf/%{target_gcc_version_full}%/include",
         "/usr/lib/gcc/arm-linux-gnueabihf/%{target_gcc_version_full}%/include-fixed",
         "/usr/arm-linux-gnueabihf/libc/usr/include",
-
     ],
     "armv6": [
         "%{bcm2708_toolchain_root}%/arm-linux-gnueabihf/arm-linux-gnueabihf/include/c++/4.9.3",
