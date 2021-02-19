@@ -38,6 +38,7 @@ def _impl(repository_ctx):
             "%{cpp_version}%": repository_ctx.attr.cpp_version,
             "%{bcm2708_toolchain_root}%": bcm2708_toolchain_root,
             "%{target_toolchain_root}%": target_toolchain_root,
+            "%{target_gcc_version_full}%": target_gcc_version_full,
             "%{additional_system_include_directories}%": additional_include_dirs,
         },
     )
